@@ -1,4 +1,3 @@
-DROP TABLE EMP;
 
 -- Create employee table
 CREATE TABLE EMP
@@ -62,4 +61,4 @@ I can write multiple lines here.
 SQL Server will ignore it.
 */
 
-Shortcut in SSMS: Select the lines and press Ctrl + K, Ctrl + C to comment them.
+--Shortcut in SSMS: Select the lines and press Ctrl + K, Ctrl + C to comment them.
