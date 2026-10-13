@@ -3,11 +3,6 @@ INSERT INTO EMP
 VALUES(100,'Sachin','clerk',4000,'2020-04-10','HR');
 
 
--- GETDATE() gives the current date
-INSERT INTO EMP
-VALUES(101,'Priya','analyst',9000,GETDATE(),'IT');
-
-
 -- Insert multiple employees at the same time
 INSERT INTO EMP
 VALUES
