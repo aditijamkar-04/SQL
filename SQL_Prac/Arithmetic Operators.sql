@@ -1,7 +1,6 @@
 /*Level 3 –
 
 Question 1: Salary Increment with Performance Bonus
-
 A company calculates employee compensation as follows:
 - Basic salary = Current salary
 - Increment = 12% of current salary
