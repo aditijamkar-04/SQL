@@ -55,7 +55,21 @@ A company wants to find employees whose names contain exactly two occurrences of
 
 Display EmployeeName, Department, and Salary.
 
+Question 11 – Advanced Challenge 
+A company wants to find employees whose names:
+- Start with any letter except A, P, or N.
+- Have at least 4 characters.
+- Contain the letter 'a' somewhere.
+- Do not end with 't'.
+Display EmployeeName, Department, and Salary.
 
+Question 12 – Final 
+A company wants to find employees whose names:
+- Start with R, A, or N.
+- Have exactly 5 characters.
+- Have 'a' as the second character.
+- Do not end with 'l'.
+Display EmployeeName, Department, and Salary.
 */
 
 --1 
@@ -120,3 +134,23 @@ WHERE EmployeeName LIKE '%a%a%'
 SELECT EmployeeName, Department, Salary
 FROM Employees
 WHERE LEN(EmployeeName) - LEN(REPLACE(EmployeeName, 'a', '')) = 2;
+
+--11
+SELECT EmployeeName, Department, Salary
+FROM Employees
+WHERE EmployeeName NOT LIKE 'A%'
+  AND EmployeeName NOT LIKE 'P%'
+  AND EmployeeName NOT LIKE 'N%'
+  AND EmployeeName LIKE '____%'
+  AND EmployeeName LIKE '%a%'
+  AND EmployeeName NOT LIKE '%t';
+
+--12
+SELECT EmployeeName, Department, Salary
+FROM Employees
+WHERE (EmployeeName LIKE 'R%'
+    OR EmployeeName LIKE 'A%'
+    OR EmployeeName LIKE 'N%')
+  AND EmployeeName LIKE '_____'
+  AND EmployeeName LIKE '_a%'
+  AND EmployeeName NOT LIKE '%l';
