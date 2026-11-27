@@ -38,6 +38,19 @@ Can specify start location	            No start-location argument
 Returns position	                      Returns position
 
 Tip: LIKE checks whether a pattern matches; CHARINDEX() and PATINDEX() return the position where a match begins.
+
+------
+
+WHERE CHARINDEX('a', EmployeeName) > 0   ---->
+- Position greater than 0 → character exists.
+- Position equal to 0 → character doesn't exist.
+- NULL → search result is unknown.
+
+-----
+
+PATINDEX('%[ae]%', EmployeeName)   -----> Finds either a or e anywhere.
+PATINDEX('[NR]%', EmployeeName)    -----> Finds names starting with N or R.
+
 */
 
 /*
